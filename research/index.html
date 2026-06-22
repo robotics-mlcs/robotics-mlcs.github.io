@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research · Robotics @ MLCS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/">Robotics <span class="at">@</span> MLCS</a>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a class="active" href="/research/">Research</a>
+        <a href="/publications/">Publications</a>
+        <a href="/funding/">Funding</a>
+        <a href="/robots/">Robots</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main class="content">
+    <div class="content-inner">
+      <h1 class="page-title" data-reveal>Research</h1>
+      <p class="page-sub" data-reveal>
+        We work on robot learning — developing algorithms that enable robots to learn and
+        act in the real world. Our work spans the following directions.
+      </p>
+
+      <div class="research-item" data-reveal>
+        <h3>Data-efficient Robot Learning</h3>
+        <p>
+          We exploit the geometric structure of robotics tasks — <strong>symmetry</strong> and <strong>equivariance</strong> (e.g. SE(3)) —
+          so that models learn far more data-efficiently and generalize from only a handful of demonstrations.
+        </p>
+        <div>
+          <span class="kw">SE(3)-Equivariance</span>
+          <span class="kw">Data Efficiency</span>
+          <span class="kw">Geometric Deep Learning</span>
+        </div>
+      </div>
+
+      <div class="research-item" data-reveal>
+        <h3>Robot Foundation Models</h3>
+        <p>
+          To generalize across diverse real-world tasks, we leverage foundation models pre-trained
+          on large-scale data from many domains — <strong>vision, language, and video</strong> —
+          to build <strong>Vision-Language-Action (VLA)</strong> models and
+          <strong>World-Action Models (WAM)</strong> for robots.
+        </p>
+        <div>
+          <span class="kw">VLA</span>
+          <span class="kw">WAM</span>
+          <span class="kw">Generalization</span>
+        </div>
+      </div>
+
+      <div class="research-item" data-reveal>
+        <h3>Task Planning with Prior Knowledge</h3>
+        <p>
+          We make robot task planning more efficient by injecting <strong>prior knowledge</strong>
+          (e.g. <strong>commonsense knowledge</strong>) represented with structures such as
+          <strong>ontologies</strong> — so robots reason about what to do with far less search and supervision.
+        </p>
+        <div>
+          <span class="kw">Ontology</span>
+          <span class="kw">Commonsense Knowledge</span>
+          <span class="kw">Task Planning</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="site-foot-inner">
+      <span>© 2026 MLCS Robotics Team · Machine Learning &amp; Control Systems Lab</span></div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
