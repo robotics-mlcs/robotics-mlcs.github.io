@@ -149,6 +149,12 @@ h2.section-h {
 .req-list { margin: 12px 0 0; padding: 0 0 0 20px; }
 .req-list li { padding: 4px 0; color: var(--text); }
 .apply-line { margin: 8px 0 0; color: var(--text); }
+.apply-btn {
+  display: inline-block; font-weight: 600; font-size: .92rem;
+  padding: 10px 18px; border-radius: 8px;
+  background: var(--navy); color: #fff; margin-top: 14px;
+}
+.apply-btn:hover { background: #0d234a; color: #fff; text-decoration: none; }
 
 /* ---------- Research ---------- */
 .research-item {
