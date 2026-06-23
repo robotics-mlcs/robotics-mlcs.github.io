@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XR Copilot for Construction · Robotics @ MLCS</title>
+  <meta name="description" content="MLCS research on an XR copilot that learns from non-verbal worker behavior and provides grounded guidance for construction component fabrication and installation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/">Robotics <span class="at">@</span> MLCS</a>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/research/">Research</a>
+        <a href="/publications/">Publications</a>
+        <a class="active" href="/projects/">Projects</a>
+        <a href="/robots/">Robots</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main class="content project-page">
+    <div class="content-inner">
+      <p class="project-eyebrow" data-reveal>IITP Project · MLCS Research Focus</p>
+      <h1 class="page-title project-title" data-reveal>XR Copilot for Construction</h1>
+      <p class="page-sub project-sub" data-reveal>
+        We develop the AI layer of an XR copilot that understands worker behavior,
+        retrieves relevant task knowledge, and provides grounded feedback for construction
+        component fabrication and installation.
+      </p>
+
+      <div class="project-meta" data-reveal>
+        <span class="kw">XR Copilot</span>
+        <span class="kw">Non-verbal Behavior</span>
+        <span class="kw">Multimodal Learning</span>
+        <span class="kw">RAG</span>
+        <span class="kw">MCP</span>
+        <span class="kw">Human-centered AI</span>
+      </div>
+
+      <section class="project-intro" data-reveal>
+        <p>
+          In construction and manufacturing workflows, much of expert skill is not written
+          in manuals. It appears in where experts look, how they hold parts, when they slow
+          down, and how they inspect the result. MLCS studies how to capture these signals
+          and turn them into guidance that workers can use through an XR interface.
+        </p>
+        <p class="official-title">
+          Official project title: Development of XR Copilot Technology Based on Non-verbal
+          Behavior for Quality and Safety Assurance in Construction Component Fabrication
+          and Installation.
+        </p>
+      </section>
+
+      <section class="project-feature" data-reveal>
+        <div class="feature-copy">
+          <span class="feature-index">01</span>
+          <h2>Counterfactual Skill Feedback</h2>
+          <p>
+            The copilot compares the worker's current motion with expert demonstrations
+            and identifies the action gap. The goal is not only to detect that an action is
+            different, but to suggest a small, concrete change that can improve the task.
+          </p>
+          <p>
+            This feedback can highlight a hand pose, wrist angle, gaze target, or inspection
+            step, helping novice workers understand what to adjust without relying only on
+            text instructions.
+          </p>
+        </div>
+        <figure class="project-figure">
+          <img src="/assets/projects/xr-copilot/counterfactual-feedback.png" alt="Counterfactual feedback compares current hand pose with an expert pose." />
+          <figcaption>
+            The system compares the current hand pose with an expert trajectory and highlights
+            the action gap that should be corrected.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="project-feature" data-reveal>
+        <div class="feature-copy">
+          <span class="feature-index">02</span>
+          <h2>Agentic XR Copilot with RAG and MCP</h2>
+          <p>
+            The copilot also needs to reason over task knowledge. Given a worker's question
+            and XR context, the LLM retrieves relevant manuals and process documents through
+            RAG and uses MCP to call structured tools that query BIM models, schedules,
+            sensor APIs, or perception modules.
+          </p>
+          <p>
+            By combining retrieved evidence with tool results, the system can generate
+            guidance grounded in the current work situation rather than generic text.
+          </p>
+        </div>
+        <figure class="project-figure">
+          <img src="/assets/projects/xr-copilot/llm-rag-mcp.png" alt="LLM copilot agent retrieves documents through RAG and queries tools through MCP." />
+          <figcaption>
+            The LLM copilot retrieves document evidence through RAG and calls construction-specific
+            tools through MCP before generating XR guidance.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="project-timeline" data-reveal>
+        <h2 class="section-h">Research Timeline</h2>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <span class="timeline-year">Year 1</span>
+            <p>
+              We build pipelines for capturing first-person demonstrations, including gaze,
+              hand pose, voice, and task context. The focus is to organize expert non-verbal
+              behavior into reusable data for skill modeling.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <span class="timeline-year">Year 2</span>
+            <p>
+              We develop counterfactual feedback models and connect the LLM copilot with
+              task knowledge and tools through RAG and MCP. The system begins to provide
+              personalized, context-aware guidance.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <span class="timeline-year">Year 3</span>
+            <p>
+              We evaluate the copilot in realistic construction workflows, refine the XR
+              interaction loop, and measure whether the system helps users understand tasks,
+              reduce mistakes, and improve their actions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="student-work" data-reveal>
+        <h2 class="section-h">What Students May Work On</h2>
+        <div class="student-grid">
+          <div>Multimodal behavior data collection from first-person sensors</div>
+          <div>Gaze, hand pose, voice, and task-context modeling</div>
+          <div>Counterfactual feedback for skill improvement</div>
+          <div>LLM agents grounded by RAG and MCP tool use</div>
+          <div>XR interaction design for human-centered guidance</div>
+          <div>Field-oriented evaluation and user studies</div>
+        </div>
+      </section>
+
+      <section class="project-cta" data-reveal>
+        <div>
+          <h2>Interested in joining this project?</h2>
+          <p>
+            We are looking for students interested in multimodal AI, robot learning,
+            XR interfaces, and human-centered intelligent systems.
+          </p>
+        </div>
+        <a class="apply-btn" href="/#apply">See how to apply →</a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="site-foot-inner">
+      <span>© 2026 MLCS Robotics Team · Machine Learning &amp; Control Systems Lab</span></div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

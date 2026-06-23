@@ -184,6 +184,8 @@ h2.section-h {
 .fund-item:hover {
   transform: translateY(-4px); box-shadow: var(--shadow-lift); border-color: var(--border-strong);
 }
+.fund-item.linked { color: inherit; text-decoration: none; }
+.fund-item.linked:hover { text-decoration: none; }
 .fund-logo {
   flex: 0 0 110px; width: 110px; height: 72px;
   display: flex; align-items: center; justify-content: center;
@@ -217,8 +219,86 @@ h2.section-h {
   padding-top: 10px; border-top: 1px dashed var(--border-strong);
 }
 .fund-recruit a { font-weight: 600; }
+.fund-recruit .inline-link { color: var(--link); font-weight: 600; }
+.fund-item.linked:hover .inline-link { text-decoration: underline; }
 .fund-body h3 { margin: 4px 0 6px; font-size: 1.08rem; line-height: 1.4; }
 .fund-body p { margin: 0; color: var(--text-soft); font-size: .95rem; }
+
+/* ---------- Project detail ---------- */
+.project-page { padding-top: 54px; }
+.project-eyebrow {
+  margin: 0 0 8px; color: var(--muted);
+  font-size: .82rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+}
+.project-title { max-width: 820px; }
+.project-sub { max-width: 860px; margin-bottom: 22px; }
+.project-meta { margin: 0 0 42px; }
+.project-intro {
+  max-width: 860px; margin-bottom: 46px; padding-left: 22px;
+  border-left: 3px solid var(--navy);
+}
+.project-intro p { margin: 0; font-size: 1.08rem; color: var(--text); }
+.project-intro .official-title {
+  margin-top: 16px; color: var(--text-soft); font-size: .9rem; line-height: 1.55;
+}
+.project-feature {
+  display: grid; grid-template-columns: minmax(260px, .78fr) minmax(0, 1.22fr);
+  gap: 34px; align-items: start; margin-bottom: 64px;
+}
+.feature-copy { position: sticky; top: 92px; }
+.feature-index {
+  display: inline-block; margin-bottom: 10px;
+  color: var(--muted); font-size: .78rem; font-weight: 700; letter-spacing: .08em;
+}
+.feature-copy h2 { margin: 0 0 12px; color: var(--navy); font-size: 1.32rem; }
+.feature-copy p { margin: 0 0 14px; color: var(--text); font-size: .98rem; line-height: 1.68; }
+.project-figure { margin: 0; }
+.project-figure img {
+  width: 100%; border-radius: 10px; border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft); background: #f4f5f7;
+}
+.project-figure figcaption {
+  margin-top: 10px; color: var(--text-soft); font-size: .86rem; line-height: 1.55;
+}
+.project-timeline { margin-bottom: 58px; }
+.timeline-item {
+  position: relative; display: grid; grid-template-columns: 34px 1fr;
+  gap: 18px; padding-bottom: 32px;
+}
+.timeline-item::before {
+  content: ""; position: absolute; left: 11px; top: 22px; bottom: 0;
+  width: 1px; background: var(--border-strong);
+}
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-item:last-child::before { display: none; }
+.timeline-dot {
+  width: 23px; height: 23px; border-radius: 50%;
+  border: 5px solid #eaf1fb; background: var(--navy); margin-top: 4px; z-index: 1;
+}
+.timeline-body {
+  padding: 22px 24px; border: 1px solid var(--border);
+  border-radius: 12px; background: #fff;
+}
+.timeline-year {
+  display: inline-block; margin-bottom: 5px;
+  color: var(--link); font-size: .8rem; font-weight: 700; text-transform: uppercase;
+}
+.timeline-body h3 { margin: 0 0 7px; color: var(--navy); font-size: 1.08rem; }
+.timeline-body p { margin: 0; color: var(--text); font-size: .95rem; }
+.student-grid {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px;
+}
+.student-grid div {
+  padding: 15px 17px; border: 1px solid var(--border);
+  border-radius: 8px; background: #fff; color: var(--text); font-size: .94rem;
+}
+.project-cta {
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  padding: 24px 26px; border: 1px solid #cfe0ff; border-radius: 12px;
+  background: #f7faff; margin-bottom: 20px;
+}
+.project-cta h2 { margin: 0 0 4px; color: var(--navy); font-size: 1.15rem; }
+.project-cta p { margin: 0; color: var(--text-soft); font-size: .94rem; }
 
 /* ---------- Publications ---------- */
 .year-block { margin-bottom: 44px; }
@@ -302,6 +382,11 @@ h2.section-h {
   .hero-band { padding: 60px 22px 56px; }
   .content { padding: 40px 22px 16px; }
   .proj-list { grid-template-columns: 1fr; }
+  .project-page { padding-top: 40px; }
+  .project-feature { grid-template-columns: 1fr; gap: 18px; margin-bottom: 48px; }
+  .feature-copy { position: static; }
+  .student-grid { grid-template-columns: 1fr; }
+  .project-cta { flex-direction: column; align-items: flex-start; }
   .pub { flex-direction: column; }
   .pub-media, .pub-media img, .pub-media video { width: 260px; }
   .fund-item { flex-direction: column; align-items: flex-start; }
