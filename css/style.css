@@ -335,7 +335,7 @@ h2.section-h {
 .pub-info { flex: 1; min-width: 0; }
 .pub-info .pub-title { font-size: 1.06rem; font-weight: 600; margin: 0 0 5px; line-height: 1.45; }
 .pub-info .authors { margin: 0 0 3px; color: #444; font-size: .92rem; font-style: italic; }
-.pub-info .authors .dim { color: var(--dim); }
+.pub-info .authors .dim { color: inherit; }
 .pub-info .venue { margin: 0 0 9px; font-size: .92rem; }
 .pub-info .venue .venue-name { font-weight: 600; color: var(--text); }
 .pub-info .venue .award { color: var(--red); font-weight: 600; margin-left: 6px; }
